@@ -1,7 +1,7 @@
 class ArticlesController < ApplicationController
 
   def show
-        @article = Article.find(params[:id])
+    @article = Article.find(params[:id])
   end
 
   def index
@@ -13,7 +13,9 @@ class ArticlesController < ApplicationController
   end
 
   def create
-    render plain: params[:article]
+    @article = Article.new(params.require(:article).permit(:title, :description))
+    @article.save
+    redirect_to @article
   end
 
 end
