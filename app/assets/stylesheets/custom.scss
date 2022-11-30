@@ -1,4 +1,32 @@
-// .bg-light {
-//     --bs-bg-opacity: 1;
-//     background-color: rgba(var(--bs-light-rgb), var(--bs-bg-opacity)) !important;
-// }
+#logo {
+  float: left;
+  font-size: 1.7em;
+  color: #fff;
+  // text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
+
+#homepage{
+  background-image: asset-url('bg_foto.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 425px;
+}
+
+/* Sticky Footer Classes */
+
+html,
+body {
+  height: 100%;
+}
+
+#page-content {
+  flex: 1 0 auto;
+  background-color: #6c757d;
+}
+
+#sticky-footer {
+  flex-shrink: none;
+}
