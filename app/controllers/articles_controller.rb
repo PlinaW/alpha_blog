@@ -17,7 +17,7 @@ before_action :set_article, only: [:show, :edit, :update, :destroy]
   end
 
   def create
-    @article = Article.new(article_params)
+      @article = Article.new(article_params)
     @article.user = User.first # teraz na szybko, zeby moglo dzialac bez authentication system
     if @article.save
       flash[:notice] = "Article was created successfully."
