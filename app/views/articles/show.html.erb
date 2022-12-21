@@ -11,7 +11,7 @@
           </div>
           <div class="card-body">
             <div class="card-text text-start"><%= simple_format(@article.description)%></div>
-            <% if logged_in? && @article.user == current_user%>
+            <% if logged_in? && (@article.user == current_user || current_user.admin?) %>
             <!-- <a href="#" class="btn btn-outline-success">View</a> -->
             <%= link_to "Edit", edit_article_path, :class => "btn btn-outline-info"%>
             <!-- <a href="#" class="btn btn-outline-danger">Delete</a> -->
